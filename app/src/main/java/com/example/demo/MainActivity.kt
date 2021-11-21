@@ -1,5 +1,6 @@
 package com.example.demo
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
@@ -48,6 +49,24 @@ class MainActivity : AppCompatActivity() {
             var c  = a.toFloat() / b
             ketqua.text = c.toString()
         }
+        var layout = findViewById<LinearLayout>(R.id.layout)
+        var img = findViewById<ImageView>(R.id.img)
+        layout.setBackgroundColor(Color.WHITE)
+        img.setImageResource(R.drawable.cmt)
 
+        //list view
+        var lv = findViewById<ListView>(R.id.listview)
+//        var monhoc : List<String> = listOf("C++","C#","python","ruby","kotlin")
+//        lv.adapter = ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1,monhoc)
+//
+        var arraymonan : ArrayList<MonAn> = ArrayList()
+
+        arraymonan.add(MonAn("Bánh mỳ pate",R.drawable.cmt))
+        arraymonan.add(MonAn("cứt chó",R.drawable.cmt))
+        arraymonan.add(MonAn("cứt mèo",R.drawable.cmt))
+        arraymonan.add(MonAn("cứt lơn",R.drawable.cmt))
+        arraymonan.add(MonAn("xoi",R.drawable.cmt))
+        arraymonan.add(MonAn("trà sữa",R.drawable.cmt))
+        lv.adapter =CustomAdapter(this@MainActivity,arraymonan)
     }
 }
