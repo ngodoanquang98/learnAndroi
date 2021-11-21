@@ -1,9 +1,19 @@
 package com.example.demo
 
+import android.content.Intent
 import android.graphics.Color
+import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.*
+import java.io.BufferedReader
+import java.io.InputStream
+import java.io.InputStreamReader
+import java.lang.Exception
+import java.lang.StringBuilder
+import java.net.HttpURLConnection
+import java.net.URL
 
 class MainActivity : AppCompatActivity() {
 
@@ -68,5 +78,13 @@ class MainActivity : AppCompatActivity() {
         arraymonan.add(MonAn("xoi",R.drawable.cmt))
         arraymonan.add(MonAn("trà sữa",R.drawable.cmt))
         lv.adapter =CustomAdapter(this@MainActivity,arraymonan)
+
+       img.setOnClickListener{
+            val intent :Intent = Intent(this,SecondActivity::class.java)
+      //     val arrayNumber :IntArray = intArrayOf(231,23,4,1,23,231332,4,42,2)
+           var hocsinh = HocSinh("Ngo Doan Quang",1998,"Nam Dinh")
+           intent.putExtra("data",hocsinh)
+            startActivity(intent)
+        }
     }
 }

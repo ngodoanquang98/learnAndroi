@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SecondActivity">
+
+    <Button
+        android:id="@+id/bback"
+        android:layout_width="45dp"
+        android:layout_height="34dp"
+        android:text="exit"
+        tools:layout_editor_absoluteX="219dp"
+        tools:layout_editor_absoluteY="186dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="51dp"
+        android:layout_height="wrap_content"
+        android:rotation="-331"
+        android:rotationX="46"
+        android:rotationY="4"
+        android:text="TextView"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="304dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="515dp"
+        android:layout_weight="1"
+        tools:srcCompat="@tools:sample/avatars" />
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="515dp"
+        android:layout_weight="1"
+        tools:srcCompat="@tools:sample/avatars" />
+</LinearLayout>

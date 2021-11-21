@@ -26,8 +26,8 @@ class CustomAdapter (var context :Context, var mangmonan :ArrayList<MonAn>) : Ba
     constructor(parcel: Parcel) : this(
         TODO("context"),
         TODO("mangmonan")
-    ) {
-    }
+    )
+
 
     override fun getCount(): Int {
         return mangmonan.size
